@@ -8,7 +8,7 @@ export default function Scoreboard() {
   });
 
   function handlePlusClick() {
-    setPlayer({ ...player, score: player.score + 1 });
+    player.score++;
   }
 
   function handleFirstNameChange(e) {
@@ -19,7 +19,9 @@ export default function Scoreboard() {
   }
 
   function handleLastNameChange(e) {
-    setPlayer({ ...player, lastName: e.target.value });
+    setPlayer({
+      lastName: e.target.value,
+    });
   }
 
   return (
